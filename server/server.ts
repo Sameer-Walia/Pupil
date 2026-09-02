@@ -65,7 +65,7 @@ app.post("/api/signup", async (req: Request, res: Response) =>
                 from: 'waliasam13@gmail.com', // transporter username email
                 to: req.body.email,             // user's email id
                 subject: 'Activation Mail from 👁️_Detect.com',
-                html: `Dear ${req.body.name}<br/><br/>Thanks for signing up on our website.<br/><br/>Click on the following link to activate your account.<br/><br/><a href='http://localhost:5173/activateaccount?code=${acttoken}'>Activate Account<a/>`
+                html: `Dear ${req.body.name}<br/><br/>Thanks for signing up on our website.<br/><br/>Click on the following link to activate your account.<br/><br/><a href=${process.env.FRONTEND_URL}/activateaccount?code=${acttoken}>Activate Account</a>`
             };
 
             transporter.sendMail(mailOptions, (error, info) =>
@@ -115,7 +115,7 @@ app.post("/api/resendmail", async (req: Request, res: Response) =>
                     from: 'sameerwalia13@gmail.com',
                     to: req.body.email,
                     subject: 'Activation Mail from 👁️_Detect.com',
-                    html: `Dear ${user.name}<br/><br/>Thanks for signing up on our website.<br/><br/>Click on the following link to activate your account.<br/><br/><a href='http://localhost:5173/activateaccount?code=${user.token}'>Activate Account<a/>`
+                    html: `Dear ${user.name}<br/><br/>Thanks for signing up on our website.<br/><br/>Click on the following link to activate your account.<br/><br/><a href=${process.env.FRONTEND_URL}/activateaccount?code=${user.token}>Activate Account</a>`
                 };
 
                 transporter.sendMail(mailOptions, (error, info) => 
@@ -138,7 +138,7 @@ app.post("/api/resendmail", async (req: Request, res: Response) =>
                     from: 'sameerwalia13@gmail.com',
                     to: req.body.email,
                     subject: 'Activation Mail from 👁️_Detect.com',
-                    html: `Dear ${user.name}<br/><br/>Thanks for signing up on our website.<br/><br/>Click on the following link to activate your account.<br/><br/><a href='http://localhost:5173/activateaccount?code=${user.token}'>Activate Account<a/>`
+                    html: `Dear ${user.name}<br/><br/>Thanks for signing up on our website.<br/><br/>Click on the following link to activate your account.<br/><br/><a href=${process.env.FRONTEND_URL}/activateaccount?code=${user.token}>Activate Account</a>`
                 };
 
                 transporter.sendMail(mailOptions, (error, info) => 
