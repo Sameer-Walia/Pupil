@@ -145,7 +145,7 @@ function Signupform()
 
     return (
         <div>
-            <form name="form1" onSubmit={onsignup} className="register-form mb-5" >
+            <form name="form1" onSubmit={onsignup} className="register-form mt-5" >
 
                 <div className="input-row mt-5">
                     <div className="input-container col">
