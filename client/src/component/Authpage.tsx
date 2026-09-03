@@ -50,7 +50,6 @@ function Authpage()
 
                 </div>
             </div>
-            <Footer />
         </div>
     )
 }

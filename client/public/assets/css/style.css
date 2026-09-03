@@ -35,6 +35,8 @@ h6 {
   color: #3f3a64;
 }
 
+
+
 /*  navbar sahil */
 
 #sahil .navbar2 {
@@ -1012,6 +1014,12 @@ h6 {
 
   #home .download-heading {
     font-size: 1.35rem;
+  }
+}
+
+@media (max-width: 765px) {
+  .images {
+    display: none;
   }
 }
 
@@ -2525,3 +2533,5 @@ form .val {
     font-size: 24px;
   }
 }
+
+
