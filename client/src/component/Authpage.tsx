@@ -1,5 +1,4 @@
 import { Link, useLocation } from 'react-router-dom';
-import Footer from './Footer';
 import Signupform from './Signupform';
 import Loginform from './Loginform';
 
