@@ -142,42 +142,79 @@ function Loginform()
 
 
     return (
-        <div>
+        <div >
             {/* <form onSubmit={onlogin} className="register-form mt-5"> */}
-            <form onSubmit={(e) => onlogin(e)} className="register-form m-5">
+            <form onSubmit={(e) => onlogin(e)} className="register-form">
 
-                <div className="input-container mt-5 ">
-
-                    <input type="email" name="useremail" placeholder="" value={email} onChange={(e) => setemail(e.target.value)} className="input-field" required />
+                <div className="input-container mt-5">
+                    <input
+                        type="email"
+                        name="useremail"
+                        placeholder=""
+                        value={email}
+                        onChange={(e) => setemail(e.target.value)}
+                        className="input-field"
+                        required
+                    />
 
                     <label className="input-label">
-                        <span><i className="fa-solid fa-envelope" /></span><span>Email</span>
+                        <span>
+                            <i className="fa-solid fa-envelope" />
+                        </span>
+                        <span>Email</span>
                     </label>
-
                 </div>
 
-                <div className="input-container mt-4 ">
-
-                    <input type="password" name="userpass" placeholder="" value={pass} onChange={(e) => setpass(e.target.value)} className="input-field" required />
+                <div className="input-container mt-4">
+                    <input
+                        type="password"
+                        name="userpass"
+                        placeholder=""
+                        value={pass}
+                        onChange={(e) => setpass(e.target.value)}
+                        className="input-field"
+                        required
+                    />
 
                     <label className="input-label">
-                        <span><i className="fa-solid fa-lock" /></span><span>Password</span>
+                        <span>
+                            <i className="fa-solid fa-lock" />
+                        </span>
+                        <span>Password</span>
                     </label>
+                </div>
 
-                </div><br />
+                <br />
 
                 <label className="checkbox">
-                    <input type="checkbox" name="cbx1" onChange={(e) => setterms(e.target.checked)} /><i> </i>Stay Sign In
+                    <input
+                        type="checkbox"
+                        name="cbx1"
+                        onChange={(e) => setterms(e.target.checked)}
+                    />
+                    Stay Sign In
                 </label>
 
-                {
-                    loading ?
-                        <div className="loader-container mt-2">
-                            <img src="assets/images/loader.gif" alt="loader" className="loader" />
-                        </div> : <input type="submit" className="register-button" value="Submit" />
-                }
+                {loading ? (
+                    <div className="loader-container mt-2">
+                        <img
+                            src="assets/images/loader.gif"
+                            alt="loader"
+                            className="loader"
+                        />
+                    </div>
+                ) : (
+                    <input
+                        type="submit"
+                        className="register-button"
+                        value="Submit"
+                    />
+                )}
 
-                <br /><b>or</b>
+                <br />
+
+                <b>or</b>
+
                 <div style={{ marginTop: "20px" }}>
                     <GoogleLogin
                         onSuccess={handleGoogleLoginSuccess}
@@ -185,10 +222,16 @@ function Loginform()
                     />
                 </div>
 
-                <p className="register-text ">
-                    New Here? <Link to="/signup" className="login-link" >Sign Up</Link>
+                <p className="register-text">
+                    New Here?{" "}
+                    <Link to="/signup" className="login-link">
+                        Sign Up
+                    </Link>
                 </p>
-                <Link to="/forgotpassword" className="login-link" >Forgot Password</Link>
+
+                <Link to="/forgotpassword" className="login-link">
+                    Forgot Password
+                </Link>
 
             </form>
 

@@ -6,7 +6,7 @@ function Home()
     return (
         <div id='home'>
             <header className="header">
-                <div className="overlay">
+                <div className="overlay mt-5">
                     <h1 className="title">AI-Powered Pupil Detection</h1>
                     <p className="descript">Detect.Analyze.Protect.</p>
                     <input type="text" placeholder="What do you need help with?" className="input" />
